@@ -6,16 +6,23 @@
 }
 
 body {
-    background: #0f172a;
+    background: #020617;
     color: #e5e7eb;
+    overflow-x: hidden;
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .hero {
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at top, #1e293b, #020617);
+    align-items: center;
 }
 
 .hero-content {
@@ -27,14 +34,12 @@ body {
 }
 
 .hero p {
-    margin: 15px 0;
-    font-size: 1.2rem;
     color: #94a3b8;
+    margin: 15px 0;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
     padding: 12px 30px;
     background: #6366f1;
     color: white;
@@ -49,17 +54,25 @@ body {
 
 section {
     padding: 80px 10%;
+    backdrop-filter: blur(6px);
 }
 
 h2 {
-    font-size: 2rem;
     margin-bottom: 30px;
+    font-size: 2rem;
 }
 
-.about p {
-    max-width: 700px;
-    line-height: 1.6;
-    color: #cbd5f5;
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-grid span {
+    background: #1e293b;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
 }
 
 .project-grid {
@@ -72,16 +85,18 @@ h2 {
     background: linear-gradient(145deg, #1e293b, #020617);
     padding: 30px;
     border-radius: 20px;
-    transition: transform 0.2s ease, box-shadow 0.2s;
     transform-style: preserve-3d;
 }
 
-.card h3 {
-    margin-bottom: 10px;
+.exp-card {
+    background: #020617;
+    border-left: 4px solid #6366f1;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-.card p {
-    color: #94a3b8;
+.contact p {
+    margin-bottom: 10px;
 }
 
 footer {
